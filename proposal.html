@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For Sahil 💙</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            background: #fff5f8;
+            scroll-behavior: smooth;
+        }
+
+        section {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* PAGE 1 */
+        #page1 {
+            background: linear-gradient(to bottom, #ffd1dc, #ffffff);
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #b3005e;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 15px 0;
+            color: #333;
+        }
+
+        .question {
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 10px;
+            transition: 0.3s;
+        }
+
+        #yesBtn {
+            background: #ff4d88;
+            color: white;
+        }
+
+        #yesBtn:hover {
+            background: #ff1f6a;
+        }
+
+        #noBtn {
+            background: #cccccc;
+        }
+
+        /* PAGE 2 */
+        #page2 {
+            background: #000;
+            color: white;
+            display: none;
+            flex-direction: column;
+        }
+
+        .images {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .images img {
+            width: 250px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 3px solid #ff4d88;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-top: 15px;
+            color: #ff4d88;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<section id="page1">
+
+    <h1>Mitti & Kinnara 💖</h1>
+
+    <p>
+        Like the shore holds the earth, Sahil holds Bhoomi —
+        a perfect balance of strength and love.
+    </p>
+
+    <p class="question">
+        Will you be forever like this to me? 💍
+    </p>
+
+    <div class="buttons">
+        <button id="yesBtn">Yes 💖</button>
+        <button id="noBtn">No 🙈</button>
+    </div>
+
+</section>
+
+
+<!-- PAGE 2 -->
+<section id="page2">
+
+    <div class="images">
+        <img src="Bhoomi1.jpeg">
+        <img src="Bhoomi2.jpeg">
+    </div>
+
+    <h2>Forever With You 💞</h2>
+
+    <audio id="song" src="bhoomi.mp4"></audio>
+
+</section>
+
+
+<script>
+
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn = document.getElementById("noBtn");
+    const page1 = document.getElementById("page1");
+    const page2 = document.getElementById("page2");
+    const song = document.getElementById("song");
+
+    // YES CLICK
+    yesBtn.addEventListener("click", () => {
+
+        page1.style.display = "none";
+        page2.style.display = "flex";
+
+        song.play();
+
+    });
+
+
+    // NO BUTTON RUNS AWAY 😄
+    noBtn.addEventListener("mouseover", () => {
+
+        const x = Math.random() * 200 - 100;
+        const y = Math.random() * 200 - 100;
+
+        noBtn.style.transform = `translate(${x}px, ${y}px)`;
+
+    });
+
+</script>
+
+</body>
+</html>
